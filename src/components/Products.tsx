@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { ArrowRight, ShoppingBag, Check } from 'lucide-react'
 import { useCart } from '../context/CartContext'
-import cake1 from "../assets/images/cake1.jpeg";
+import cake21 from "../assets/images/cake21.jpeg";
 import cake2 from "../assets/images/cake2.jpeg";
 import cake3 from "../assets/images/cake3.jpeg";
 import cake4 from "../assets/images/cake4.jpeg";
@@ -15,10 +15,10 @@ interface ProductsProps {
 
 const products = [
   {
-    id: 'p-serene-ocean-waves',
-    name: 'Serene Ocean Waves Cake',
-    desc: 'Ocean breeze, silver elegance',
-    img: cake1,
+    id: 'p-lavender-dress-custom',
+    name: 'Lavender Dress Custom Cake',
+    desc: 'Elegant purple gown, pearl detailing',
+    img: cake21,
     page: 'custom',
     tag: 'Custom',
     category: 'Custom Cakes',

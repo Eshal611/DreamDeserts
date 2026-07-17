@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { CheckCircle, ArrowRight } from 'lucide-react'
-
+import cake5 from "../assets/images/cake5.jpeg";
 interface AboutProps {
   setCurrentPage: (page: string) => void
 }
@@ -82,8 +82,8 @@ export default function About({ setCurrentPage }: AboutProps) {
           {/* Main Image */}
           <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_64px_rgba(44,24,16,0.18)] aspect-[4/5] bg-[#E8D5CC]">
             <img
-              src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=800&h=1000&fit=crop&auto=format"
-              alt="Elegant tiered cake with floral decoration"
+              src={cake5}
+              alt="Serene Ocean Custom Cake"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
             {/* Overlay */}

@@ -1,16 +1,24 @@
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { X, ZoomIn } from 'lucide-react'
+import cake1 from "../assets/images/cake1.jpeg";
+import cake7 from "../assets/images/cake7.jpeg";
+import cake13 from "../assets/images/cake13.png";
+import cake20 from "../assets/images/cake20.png";
+import cake15 from "../assets/images/cake15.png";
+import cake12 from "../assets/images/cake12.png";
+import cake19 from "../assets/images/cake19.png";
+import cake14 from "../assets/images/cake14.png";
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&h=800&fit=crop&auto=format', alt: 'Elegant white fondant wedding cake', span: 'row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=400&fit=crop&auto=format', alt: 'Layered chocolate birthday cake', span: '' },
-  { src: 'https://images.unsplash.com/photo-1558636508-e0969431f215?w=600&h=400&fit=crop&auto=format', alt: 'Rainbow sprinkle celebration cake', span: '' },
-  { src: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=600&h=800&fit=crop&auto=format', alt: 'Floral decorated fondant cake', span: 'row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1562777717-dc6984f65a63?w=600&h=400&fit=crop&auto=format', alt: 'Pastel birthday cake with flowers', span: '' },
-  { src: 'https://images.unsplash.com/photo-1587668178277-295251f900ce?w=600&h=400&fit=crop&auto=format', alt: 'Mirror glaze artistic cake', span: '' },
-  { src: 'https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=600&h=400&fit=crop&auto=format', alt: 'Tiered gold and white wedding cake', span: '' },
-  { src: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&h=400&fit=crop&auto=format', alt: 'Classic vanilla frosted cake', span: '' },
+  { src: cake1, alt: 'Serene Ocean Custom Cake', span: 'row-span-2' },
+  { src: cake20, alt: 'Elegant Ruffled Doll Cake', span: '' },
+  { src: cake12, alt: 'Crimson Wedding Cake', span: '' },
+  { src: cake7, alt: 'Fairy Dream Birthday Cake', span: 'row-span-2' },
+  { src: cake15, alt: 'Vintage Monochrome Wedding Cake', span: '' },
+  { src: cake19, alt: 'Chibi Bears Cartoon Cake', span: '' },
+  { src: cake13, alt: 'ChatGPT Graduation Custom Cake', span: '' },
+  { src: cake14, alt: 'Blush Floral Wedding Cake', span: '' },
 ]
 
 export default function Gallery() {

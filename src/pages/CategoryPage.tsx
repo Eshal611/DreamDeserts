@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext'
 import cake1 from "../assets/images/cake1.jpeg";
 import cake2 from "../assets/images/cake2.jpeg";
 import cake3 from "../assets/images/cake3.jpeg";
-import cake4 from "../assets/images/cake4.jpeg";
+import cake22 from "../assets/images/cake22.png";
 import cake5 from "../assets/images/cake5.jpeg"
 import cake6 from "../assets/images/cake6.jpeg";
 import cake7 from "../assets/images/cake7.jpeg";
@@ -98,16 +98,16 @@ const categoryData = {
         ],
       },
       {
-        id: 'p-festive-celebration-birthday',
-        name: 'Festive Celebration Birthday Cake',
-        desc: 'Sweet layers, colorful joy',
-        detail: 'A beautiful and vibrant birthday cake handcrafted with premium frosting and custom toppings for a memorable celebration.',
-        img: cake4,
+        id: 'p-floral-butterfly-birthday',
+        name: 'Floral Butterfly Birthday Cake',
+        desc: 'Vibrant watercolor streaks, golden joy',
+        detail: 'A beautiful white birthday cake decorated with pink and purple watercolor brushstrokes, vibrant flower toppers, metallic butterflies, and elegant gold leaf flakes.',
+        img: cake22,
         category: 'Birthday Cakes',
         highlights: [
-          'Custom Birthday Theme',
-          'Premium Frosting',
-          'Handcrafted Details'
+          'Pink & Purple Watercolor Strokes',
+          'Vibrant Floral & Butterfly Accents',
+          'Premium Gold Leaf & Sphere Details'
         ],
       },
     ],

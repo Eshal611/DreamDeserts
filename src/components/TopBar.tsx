@@ -30,12 +30,12 @@ export default function TopBar() {
         <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
           <a href="tel:+11234567890" className="flex items-center gap-1.5 hover:text-[#C9A84C] transition-colors">
             <Phone size={11} />
-            <span>+1 (234) 567-890</span>
+            <span>+92 3098965072</span>
           </a>
           <span className="hidden sm:block text-[#5A3A2E]">|</span>
-          <a href="mailto:hello@dreamdesserts.com" className="flex items-center gap-1.5 hover:text-[#C9A84C] transition-colors">
+          <a href="mailto:eshalfatima4150@gmail.com" className="flex items-center gap-1.5 hover:text-[#C9A84C] transition-colors">
             <Mail size={11} />
-            <span>hello@dreamdesserts.com</span>
+            <span>eshalfatima4150@gmail.com</span>
           </a>
         </div>
         <div className="flex items-center gap-3">
@@ -47,7 +47,7 @@ export default function TopBar() {
             className="hover:text-[#C9A84C] transition-colors">
             <InstagramIcon />
           </a>
-          <a href="https://wa.me/11234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+          <a href="https://wa.me/03098965072" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
             className="hover:text-[#C9A84C] transition-colors">
             <WhatsAppIcon />
           </a>
