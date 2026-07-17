@@ -10,13 +10,15 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === 'development'
 
   return {
-    base: process.env.FIGMA_PUBLIC_URL
-      ? `${process.env.FIGMA_PUBLIC_URL}/`
-      : '/DreamDeserts/',
-       build: {
-        sourcemap: emitSourcemaps ? 'inline' : false,
-        minify: !emitSourcemaps,
-      },
+    base: process.env.VERCEL
+      ? '/'
+      : process.env.FIGMA_PUBLIC_URL
+        ? `${process.env.FIGMA_PUBLIC_URL}/`
+        : '/DreamDeserts/',
+         build: {
+          sourcemap: emitSourcemaps ? 'inline' : false,
+          minify: !emitSourcemaps,
+        },
     plugins: [
       react(),
       tailwindcss(),
