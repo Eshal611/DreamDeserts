@@ -81,7 +81,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               A premium home bakery crafting bespoke cakes for life's most cherished moments, made with love and the finest ingredients.
             </p>
             <div className="flex gap-3">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              <a href="https://www.instagram.com/dd_bakers_?igsh=c2R6NHEya28zM3Q2" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                 className="w-9 h-9 rounded-full border border-[#3D2314] flex items-center justify-center text-[#7A5C52] hover:bg-[#C17F74] hover:border-[#C17F74] hover:text-white transition-all duration-300">
                 <InstagramIcon />
               </a>
@@ -151,19 +151,19 @@ export default function Footer({ setCurrentPage }: FooterProps) {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone size={14} className="text-[#C17F74] mt-0.5 shrink-0" />
-                <span className="text-sm text-[#7A5C52]">+1 (234) 567-890</span>
+                <span className="text-sm text-[#7A5C52]">0309 8965072</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={14} className="text-[#C17F74] mt-0.5 shrink-0" />
-                <span className="text-sm text-[#7A5C52]">hello@dreamdesserts.com</span>
+                <span className="text-sm text-[#7A5C52]">nargisbano191@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-[#C17F74] mt-0.5 shrink-0" />
-                <span className="text-sm text-[#7A5C52]">123 Baker Street, Sweet Town, ST 45678</span>
+                <span className="text-sm text-[#7A5C52]">Jhal Satyana Road West Canal Road</span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={14} className="text-[#C17F74] mt-0.5 shrink-0" />
-                <span className="text-sm text-[#7A5C52]">Mon – Sat: 9am – 7pm<br />Sunday: 10am – 4pm</span>
+                <span className="text-sm text-[#7A5C52]">24 Hours<br />Available</span>
               </li>
             </ul>
           </div>
@@ -173,7 +173,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
       {/* Bottom Bar */}
       <div className="border-t border-[#2A1610] py-5 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#5A3A2E]">
-          <p>© 2025 Dream Desserts. All rights reserved.</p>
+          <p>© 2026 Dream Desserts. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Made with <Heart size={11} fill="#C17F74" className="text-[#C17F74]" /> for every celebration
           </p>

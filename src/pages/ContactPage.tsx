@@ -32,7 +32,7 @@ const WhatsAppIcon = ({ size = 14 }: { size?: number }) => (
    3. All contact inquiries will be delivered to your email.
    ──────────────────────────────────────────────────────────── */
 
-const WEB3FORMS_ACCESS_KEY = '3a1c65ce-4d35-4dd5-9e3d-61f6d8fdabf5'
+const WEB3FORMS_ACCESS_KEY = 'f80f5ad6-afdb-4758-b117-c1303a89e622'
 
 export default function ContactPage({ setCurrentPage }: ContactPageProps) {
   const [submitted, setSubmitted] = useState(false)
@@ -47,29 +47,42 @@ export default function ContactPage({ setCurrentPage }: ContactPageProps) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    console.log(WEB3FORMS_ACCESS_KEY)
     setLoading(true)
 
     const formData = new FormData(e.currentTarget)
-    formData.append('access_key', WEB3FORMS_ACCESS_KEY)
+    // formData.append('access_key', WEB3FORMS_ACCESS_KEY)
     formData.append('subject', form.subject ? `Inquiry: ${form.subject}` : 'New Inquiry — Dream Desserts')
     formData.append('from_name', 'Dream Desserts Contact Form')
-    formData.append('replyto', form.email)
-    formData.append('redirect', 'false')
+    formData.append('reply_to', form.email)
+    console.log([...formData.entries()])
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData,
       })
+      console.log(res.status)
+
       const data = await res.json()
-      if (data.success) setSubmitted(true)
-      else setSubmitted(true)
+      console.log(data)
+      if (data.success) {
+        setSubmitted(true)
+        setForm({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        })
+      } else {
+        alert('Failed to send message. Please try again.')
+      }
     } catch {
-      setSubmitted(true)
+      alert('Something went wrong. Please try again.')
     } finally {
       setLoading(false)
     }
   }
-
   return (
     <div className="min-h-screen bg-[#FFFDF8]">
       {/* Hero */}
@@ -134,9 +147,9 @@ export default function ContactPage({ setCurrentPage }: ContactPageProps) {
             <div className="space-y-4">
               {[
                 { icon: Phone, label: 'Phone', val: '+92 309 8965072', href: 'tel:+923098965072' },
-                { icon: Mail, label: 'Email', val: 'eshalfatima4150@gmail.com', href: 'mailto:eshalfatima4150@gmail.com' },
-                { icon: MapPin, label: 'Address', val: '123 Baker Street, Sweet Town, ST 45678', href: '#' },
-                { icon: Clock, label: 'Hours', val: 'Mon–Sat: 9am–7pm • Sun: 10am–4pm', href: '#' },
+                { icon: Mail, label: 'Email', val: 'nargisbano191@gmail.com', href: 'mailto:nargisbano191@gmail.com' },
+                { icon: MapPin, label: 'Address', val: 'Jhal Satyana Road West Canal Road', href: '#' },
+                { icon: Clock, label: 'Hours', val: 'Available 24/7 ', href: '#' },
               ].map(({ icon: Icon, label, val, href }) => (
                 <a
                   key={label}
@@ -178,7 +191,7 @@ export default function ContactPage({ setCurrentPage }: ContactPageProps) {
               <div className="text-center">
                 <MapPin size={32} className="text-[#C17F74] mx-auto mb-2" />
                 <p className="text-[#7A5C52] text-sm font-light">Google Map Placeholder</p>
-                <p className="text-xs text-[#B0937E]">123 Baker Street, Sweet Town</p>
+                <p className="text-xs text-[#B0937E]">Jhal Satyana Road West Canal Road</p>
               </div>
             </div>
           </motion.div>
@@ -233,7 +246,7 @@ export default function ContactPage({ setCurrentPage }: ContactPageProps) {
                   className="p-8 space-y-5"
                 >
                   {/* Web3Forms required hidden fields */}
-                  <input type="hidden" name="access_key" value="3a1c65ce-4d35-4dd5-9e3d-61f6d8fdabf5" />
+                  <input type="hidden" name="access_key" value="f80f5ad6-afdb-4758-b117-c1303a89e622" />
                   <input type="hidden" name="from_name" value="Dream Desserts Contact Form" />
                   <input type="checkbox" name="botcheck" className="hidden" />
 

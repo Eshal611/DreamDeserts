@@ -4,40 +4,41 @@ import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const reviews = [
   {
-    name: 'Sophia Bennett',
+    name: 'Amna Imran',
     role: 'Bride, June 2024',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&auto=format',
     rating: 5,
-    text: "Our wedding cake was an absolute masterpiece. Dream Desserts understood exactly the look and flavor we wanted — every guest was in awe. The taste was even more stunning than the design!",
+    text: "Ordered a customized birthday cake with fresh red roses and an elegant modern design. The cake looked absolutely breathtaking, like a piece of art, and tasted divine. Dream Desserts has earned a customer for life!",
   },
   {
-    name: 'Emily Rodriguez',
-    role: 'Birthday Celebration',
+    name: 'M Ali',
+    role: 'Corporate Event',
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&auto=format',
     rating: 5,
-    text: "I ordered a custom floral birthday cake and I was speechless when it arrived. The attention to detail, the flavors, the presentation — everything was beyond perfect. Highly recommend!",
+    text: "Extremely impressed by the craftsmanship! The details on this half-graduation cake were spot on. It looked so professional and elegant on the table, and everyone praised the flavor. Highly recommended!",
   },
   {
-    name: 'James Whitmore',
-    role: 'Corporate Event',
+    name: 'Sarmad ',
+    role: 'Birthday Celebration',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&auto=format',
     rating: 5,
-    text: "We ordered a custom cake for our company anniversary and it was the highlight of the event. Elegant, delicious, and delivered right on time. Dream Desserts is simply exceptional.",
+    text: "I ordered the adorable cartoon cake for a birthday, and it was a massive hit! The edible illustration of the bears was so neat, and the cream piping looked incredibly soft and clean. It tasted just as good as it looked—definitely ordering again!",
   },
   {
-    name: 'Amara Johnson',
+    name: 'Sehar Noor',
     role: "Daughter's Birthday",
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&auto=format',
     rating: 5,
     text: "The unicorn cake for my daughter's party was magical! She was over the moon seeing her dream cake come to life. The team was so patient with all my requests. Truly outstanding work.",
   },
   {
-    name: 'Claire Thompson',
+    name: 'Malaika Noor',
     role: 'Anniversary Surprise',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&auto=format',
     rating: 5,
-    text: "Ordered a surprise anniversary cake with custom fondant decorations. The cake not only looked like a painting but tasted absolutely divine. Dream Desserts has earned a customer for life!",
+    text: "We picked this stunning blue texturing cake for a family gathering and everyone was blown away. The textured frosting look combined with the silver leaf and dark blue flower looked incredibly sophisticated. It was light, moist, and not overly sweet at all!",
   },
+  
 ]
 
 export default function Testimonials() {

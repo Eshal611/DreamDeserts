@@ -35,7 +35,7 @@ export default function TopBar() {
           <span className="hidden sm:block text-[#5A3A2E]">|</span>
           <a href="mailto:eshalfatima4150@gmail.com" className="flex items-center gap-1.5 hover:text-[#C9A84C] transition-colors">
             <Mail size={11} />
-            <span>eshalfatima4150@gmail.com</span>
+            <span>nargisbano191@gmail.com</span>
           </a>
         </div>
         <div className="flex items-center gap-3">
@@ -43,7 +43,7 @@ export default function TopBar() {
             className="hover:text-[#C9A84C] transition-colors">
             <FacebookIcon />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+          <a href="https://www.instagram.com/dd_bakers_?igsh=c2R6NHEya28zM3Q2" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
             className="hover:text-[#C9A84C] transition-colors">
             <InstagramIcon />
           </a>
