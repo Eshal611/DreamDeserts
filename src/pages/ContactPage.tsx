@@ -24,13 +24,6 @@ const WhatsAppIcon = ({ size = 14 }: { size?: number }) => (
   </svg>
 )
 
-/* ─────────────────────────────────────────────────────────────
-   Web3Forms Integration Notes
-   ─────────────────────────────────────────────────────────────
-   1. Sign up at https://web3forms.com and get your Access Key.
-   2. Replace "YOUR_WEB3FORMS_ACCESS_KEY" below with that key.
-   3. All contact inquiries will be delivered to your email.
-   ──────────────────────────────────────────────────────────── */
 
 const WEB3FORMS_ACCESS_KEY = 'f80f5ad6-afdb-4758-b117-c1303a89e622'
 
@@ -65,6 +58,7 @@ export default function ContactPage({ setCurrentPage }: ContactPageProps) {
       console.log(res.status)
 
       const data = await res.json()
+      console.log("Response:", data)
       console.log(data)
       if (data.success) {
         setSubmitted(true)

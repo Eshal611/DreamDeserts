@@ -17,7 +17,7 @@ const inputClass = `w-full px-4 py-3.5 rounded-2xl border border-[#E8D5CC] bg-wh
       and route submissions to your registered email address.
    ──────────────────────────────────────────────────────────── */
 
-const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'
+const WEB3FORMS_ACCESS_KEY = 'f80f5ad6-afdb-4758-b117-c1303a89e622'
 
 export default function BookingPage({ setCurrentPage }: BookingPageProps) {
   const [submitted, setSubmitted] = useState(false)
@@ -38,25 +38,41 @@ export default function BookingPage({ setCurrentPage }: BookingPageProps) {
     setLoading(true)
 
     const formData = new FormData(e.currentTarget)
-    formData.append('access_key', WEB3FORMS_ACCESS_KEY)
+    // formData.append('access_key', WEB3FORMS_ACCESS_KEY)
     formData.append('subject', `New Cake Booking Request — ${form.name}`)
     formData.append('from_name', 'Dream Desserts Booking Form')
-
+    formData.append('reply_to', form.email)
+    console.log("Access Key =", formData.get("access_key"))
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData,
       })
+      console.log(res.status)
+
       const data = await res.json()
+      console.log("Response:", data)
+      console.log("Message:", data.message)
       if (data.success) {
         setSubmitted(true)
+
+        setForm({
+          name: '',
+          phone: '',
+          email: '',
+          category: '',
+          date: '',
+          weight: '',
+          flavor: '',
+          instructions: '',
+        })
+
+        setFileName('')
       } else {
-        // Form submitted but API error — still show success to user
-        setSubmitted(true)
+        alert('Failed to submit order. Please try again.')
       }
     } catch {
-      // Network error fallback
-      setSubmitted(true)
+      alert('Something went wrong. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -157,7 +173,7 @@ export default function BookingPage({ setCurrentPage }: BookingPageProps) {
               >
                 {/* Web3Forms required fields */}
                 <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
-                <input type="hidden" name="subject" value="New Cake Booking Request — Dream Desserts" />
+                {/* <input type="hidden" name="subject" value="New Cake Booking Request — Dream Desserts" /> */}
                 <input type="hidden" name="from_name" value="Dream Desserts Booking Form" />
                 <input type="checkbox" name="botcheck" className="hidden" />
 
@@ -237,7 +253,7 @@ export default function BookingPage({ setCurrentPage }: BookingPageProps) {
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label className="block text-xs font-semibold tracking-widest uppercase text-[#7A5C52] mb-2">Reference Image (Optional)</label>
                   <label className="flex flex-col items-center justify-center gap-3 w-full h-32 rounded-2xl border-2 border-dashed border-[#E8D5CC] bg-[#FAF3EE] cursor-pointer hover:border-[#C17F74] hover:bg-[#F5E6E0] transition-all duration-200">
                     <Upload size={22} className="text-[#C17F74]" />
@@ -253,7 +269,7 @@ export default function BookingPage({ setCurrentPage }: BookingPageProps) {
                       onChange={(e) => setFileName(e.target.files?.[0]?.name || '')}
                     />
                   </label>
-                </div>
+                </div> */}
 
                 <div className="pt-3">
                   <button
